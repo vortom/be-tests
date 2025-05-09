@@ -172,6 +172,5 @@ cython_debug/
 
 # Custom
 .vscode
-__playground.py
 .DS_Store
 tmp/

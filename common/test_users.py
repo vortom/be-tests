@@ -29,8 +29,3 @@ class TestUsers(BaseSetup):
         # TODO - implement the logic to refresh token
         self.logger.info(f"Refreshing user {self.user_name}...")
         self.access_token = self.user_secret
-
-
-
-
-

@@ -174,3 +174,4 @@ cython_debug/
 .vscode
 __playground.py
 .DS_Store
+tmp/

@@ -1,0 +1,4 @@
+pytest
+locust
+requests
+flask

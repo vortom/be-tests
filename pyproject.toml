@@ -3,11 +3,11 @@ log_cli = true
 log_cli_format = "%(asctime)s.%(msecs)03d %(levelname)s %(message)s"
 log_cli_level = "DEBUG"
 testpaths = "./tests"
-python_files = "tests/functional_test_example.py"
-addopts = "-s --durations=10 --maxfail=1"
+python_files = "tests/test_*.py"
+addopts = "-s --durations=5"
 
 [tool.locust]
-locustfile = "tests/performance_test_example.py"
+python_files = "tests/test_*.py"
 headless = false
 users = 5
 spawn-rate = 5

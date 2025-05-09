@@ -56,10 +56,11 @@ class HttpClient(BaseSetup):
                 catch_response=catch_response
             ) as response:
                 if catch_response and response.status_code == expected_status_code:
-                        response.success()
+                    response.success()
+                
                 elif catch_response and response.status_code != expected_status_code:
-                        self.logger.error(f"<{request_id}> Unexpected status code {response.status_code}, expected {expected_status_code} | request_id {request_id}")
-                        response.failure(f"Unexpected status code {response.status_code}, expected {expected_status_code}")
+                    self.logger.error(f"<{request_id}> Unexpected status code {response.status_code}, expected {expected_status_code} | request_id {request_id}")
+                    response.failure(f"Unexpected status code {response.status_code}, expected {expected_status_code}")
 
         self.logger.info(f"<{request_id}> Request finished with status code {response.status_code}")
         self.logger.debug(f"Response headers: {response.headers}")

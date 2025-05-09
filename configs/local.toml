@@ -1,0 +1,7 @@
+[api.petstore]
+host = "http://127.0.0.1:5000"
+api-key = "special-key"
+
+[test.common]
+user-agent = "BeTestsAgent"
+username-prefix = "user_"

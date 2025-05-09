@@ -1,0 +1,15 @@
+[tool.pytest.ini_options]
+log_cli = true
+log_cli_format = "%(asctime)s.%(msecs)03d %(levelname)s %(message)s"
+log_cli_level = "DEBUG"
+testpaths = "./tests"
+python_files = "tests/test_*.py"
+addopts = "-s --durations=5"
+
+[tool.locust]
+locustfile = "tests/test_example.py"
+headless = false
+users = 5
+spawn-rate = 5
+run-time = "10m"
+loglevel = "INFO"

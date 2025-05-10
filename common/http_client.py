@@ -29,11 +29,13 @@ class HttpClient(BaseSetup):
                     cert=self.cert
                 )
 
-                if expected_status_code:
-                    assert response.status_code == expected_status_code, f"Unexpected status code {response.status_code}, expected {expected_status_code} | request_id {request_id}"
+                if not expected_status_code:
+                    response.raise_for_status()
 
                 else:
-                    response.raise_for_status()
+                    if response.status_code != expected_status_code:
+                        self.logger.error(f"<{request_id}> Unexpected status code {response.status_code}, expected {expected_status_code} | request_id {request_id}")
+                        assert response.status_code == expected_status_code, f"Unexpected status code {response.status_code}, expected {expected_status_code} | request_id {request_id}"
 
             except requests.exceptions.RequestException as e:
                 self.logger.error(f"<{request_id}> Request failed: {e}")

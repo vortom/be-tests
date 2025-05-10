@@ -7,9 +7,9 @@ from os import environ
 import tomllib
 
 test_env = environ.get('BET_ENV')
-assert test_env, "Env variable not set, e.g.: export BET_ENV='local'"
+assert test_env, "Env variable not set, e.g.: export BET_ENV=local"
 test_type = environ.get("BET_TYPE")
-assert test_type, "Test type variable not set, e.g.: export BET_TYPE='e2e'"
+assert test_type, "Test type variable not set, e.g.: export BET_TYPE=e2e"
 
 
 class Env(BaseSetup):

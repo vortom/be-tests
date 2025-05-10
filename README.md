@@ -39,3 +39,7 @@ locust
 ## Test runner
 
 Read `.env` file and run tests automatically based on the `BET_TYPE` and `BET_ENV` system variables using the `./be_tests_runner.sh` script.
+
+## Copilot playground
+
+In `./docs/prompts.py`, there are prompts to automate certain tasks—for example, implementing methods according to the OpenAPI specification.

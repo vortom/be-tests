@@ -38,4 +38,4 @@ locust
 
 ## Test runner
 
-Run tests automatically based on the `BET_TYPE` system variable using the `./be_tests_runner.sh` script.
+Read `.env` file and run tests automatically based on the `BET_TYPE` and `BET_ENV` system variables using the `./be_tests_runner.sh` script.
